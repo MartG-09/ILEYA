@@ -4,9 +4,9 @@ public class CheckOut {
 
     public static Scanner inputCollector = new Scanner(System.in);
 
-    public static ArrayList<String> userList = new ArrayList<String>();
+    public static ArrayList<String> product = new ArrayList<String>();
 
-    public static ArrayList<Integer> pieceList = new ArrayList<>();
+    public static ArrayList<Integer> quantity = new ArrayList<>();
 
     public static ArrayList<Double> priceList = new ArrayList<>();
 
@@ -23,14 +23,14 @@ public class CheckOut {
             System.out.println("What did the user buy? ");
              String item = inputCollector.nextLine();
     
-                userList.add(item);
+                product.add(item);
         } 
 
             public static void getPiecesList() {
                System.out.println("How many pieces? ");
                    piece = inputCollector.nextInt();
 
-                    pieceList.add(piece);
+                    quantity.add(piece);
             }
 
                 public static void getPricesList() {
@@ -164,8 +164,8 @@ public class CheckOut {
 
                         """ , cashierName , userName);
 
-            for (int count = 0; count < userList.size(); count++) {
-                    System.out.printf("%20s%10d%17.2f%16.2f%n" , userList.get(count) , pieceList.get(count) , priceList.get(count) , totalList.get(count));
+            for (int count = 0; count < product.size(); count++) {
+                    System.out.printf("%20s%10d%17.2f%16.2f%n" , product.get(count) , quantity.get(count) , priceList.get(count) , totalList.get(count));
             }
 
             System.out.printf("""
@@ -219,8 +219,8 @@ public class CheckOut {
 
                         """ , cashierName , userName);
 
-            for (int count = 0; count < userList.size(); count++) {
-                    System.out.printf("%20s%10d%17.2f%16.2f%n" , userList.get(count) , pieceList.get(count) , priceList.get(count) , totalList.get(count));
+            for (int count = 0; count < product.size(); count++) {
+                    System.out.printf("%20s%10d%17.2f%16.2f%n" , product.get(count) , quantity.get(count) , priceList.get(count) , totalList.get(count));
             }
 
             System.out.printf("""

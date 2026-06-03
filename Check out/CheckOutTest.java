@@ -10,8 +10,16 @@ public class CheckOutTest {
         }
 
     @Test
-        public void testThatGetUserListWorks() {
-            int CheckOut.getUserList();
+        public void testThatCheckOutCalculatesTotal() {
+            CheckOut.totalList.clear ();
+            CheckOut.price = 2;
+            CheckOut.piece = 550;
+            double expected = 1100;
+            
+            CheckOut.getTotal();
+
+            double actual = CheckOut.totalList.get(0);
+            assertEquals(expected , actual);
             
         }
 
